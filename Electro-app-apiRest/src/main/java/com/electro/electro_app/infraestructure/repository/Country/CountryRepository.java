@@ -7,5 +7,5 @@ import com.electro.electro_app.domain.entities.Country;
 
 @Repository
 public interface CountryRepository extends JpaRepository<Country, Long> {
-    // Custom query methods can be defined here if needed
+    boolean ExistsByCountryName(String username);
 }
