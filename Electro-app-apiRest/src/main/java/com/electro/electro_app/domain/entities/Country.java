@@ -3,6 +3,7 @@ package com.electro.electro_app.domain.entities;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.electro.electro_app.infraestructure.util.Validation.ExistsByCountryName;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.CascadeType;
@@ -31,6 +32,7 @@ public class Country {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @ExistsByCountryName
     @Column(length = 50, nullable = false)
     private String name;
 
